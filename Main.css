@@ -247,7 +247,6 @@ body {
     left: 700px;
 }
 #caveblocker1 {
-    background-color: red;
     width: 1px;
     height: 125px;
     top: 300px;
@@ -273,18 +272,75 @@ body {
     left: 300px;
 }
 #caveblocker2 {
-    background-color: red;
     width: 1px;
     height: 125px;
     top: 703px;
     left: 430px;
 }
 #caveblocker3 {
-    background-color: red;
     width: 1px;
     height: 125px;
     top: 703px;
     left: 295px;
+}
+
+.RandomMover {
+    z-index: 9;
+    top: 400px;
+    left: 400px;
+    width: 20px;
+    height: 20px;
+    background-image: url(Object.png);
+    position: absolute;
+}
+#RandomMover1 {
+    z-index: 9;
+    top: 200px;
+    left: 400px;
+    width: 20px;
+    height: 20px;
+}
+#RandomMover2 {
+    z-index: 9;
+    top: 600px;
+    left: 400px;
+    width: 20px;
+    height: 20px;
+}
+#rock7 {
+    position: absolute;
+    z-index: 6;
+    background-image: url(Stone.png);
+    width: 80px;
+    height: 70px;
+    top: 430px;
+    left: 330px;
+    rotate: 160deg;
+}
+#rock7hitbox {
+    z-index: 6;
+    width: 72px;
+    height: 65px;
+    top: 435px;
+    left: 335px;
+}
+#rock8 {
+    position: absolute;
+    z-index: 6;
+    background-image: url(Stone.png);
+    width: 80px;
+    height: 70px;
+    top: 170px;
+    left: 530px;
+    rotate: 260deg;
+}
+#rock8hitbox {
+    z-index: 6;
+    width: 57px;
+    height: 60px;
+    top: 188px;
+    left: 553px;
+    rotate: 60deg;
 }
 
 /*To Do*/
