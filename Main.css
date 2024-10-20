@@ -323,12 +323,12 @@ body {
     align-items: center;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    word-wrap: break-word; /* Lai aplauztu tekstu */
+    word-wrap: break-word;
 }
 
 .todo-text {
     max-width: 300px;
-    word-wrap: break-word; /* Aplauž tekstu, ja tas ir garš */
+    word-wrap: break-word;
 }
 
 .delete-btn {
