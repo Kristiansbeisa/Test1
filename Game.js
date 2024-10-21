@@ -305,3 +305,25 @@ function Hidebuttons() {
         rightbut.style.display = "none";
      }
 }
+
+function addButtonListeners(buttonId, key) {
+    const button = document.getElementById(buttonId);
+
+    button.addEventListener('mousedown', () => keysPressed[key] = true);
+    button.addEventListener('mouseup', () => keysPressed[key] = false);
+    button.addEventListener('mouseleave', () => keysPressed[key] = false);
+
+    button.addEventListener('touchstart', () => {
+        keysPressed[key] = true;
+        event.preventDefault(); 
+    });
+    button.addEventListener('touchend', () => {
+        keysPressed[key] = false;
+        event.preventDefault();
+    });
+}
+
+addButtonListeners('upButton', 'ArrowUp');
+addButtonListeners('leftButton', 'ArrowLeft');
+addButtonListeners('downButton', 'ArrowDown');
+addButtonListeners('rightButton', 'ArrowRight');
