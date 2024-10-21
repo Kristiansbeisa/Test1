@@ -343,7 +343,37 @@ body {
     rotate: 60deg;
 }
 
-/*To Do*/
+.control-button {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#buttonshow {
+    color: white;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+#upButton {
+    display: none;
+}
+#downButton {
+    display: none;
+}
+#leftButton {
+    display: none;
+}
+#rightButton {
+    display: none;
+}
+
+
 #todo-form {
     display: flex;
     justify-content: center;
@@ -381,6 +411,8 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     word-wrap: break-word; /* Lai aplauztu tekstu */
 }
+
+
 
 .todo-text {
     max-width: 300px;

@@ -12,9 +12,12 @@
             <a class="active" href="index.html">Home</a>
             <a href="Game.html">Game</a>
             <a href="Todo.html">To do</a>
+            <br>
+            <label id="buttonshow" for="buttonshowcheck">Show move buttons</label>
+        <input type="checkbox" id="buttonshowcheck" onclick="Hidebuttons()">
           </div>
-    </body>
     </div>
+</div>
     <div id="MainField">
         <div id="Cilveeks"></div>
         <div id="water1" class="obstacle"></div>
@@ -51,5 +54,15 @@
         <div id="rock8"></div>
         <div id="rock8hitbox" class="obstacle"></div>
     </div>
+    <br>
+    <div id="button-container">
+        <button id="upButton" class="control-button up-button">Up</button>
+    </div>
+    <div id="button-container">
+        <button id="leftButton" class="control-button left-button">Left</button>
+        <div><button id="downButton" class="control-button">Down</button></div>
+        <button id="rightButton" class="control-button">Right</button>
+    </div>
+    </body>
     <script type="text/javascript" src="Game.js"></script>
 </html>

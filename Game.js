@@ -216,7 +216,7 @@ var object = document.getElementById('Cilveeks');
         let newLeft = left;
         let newTop = top;
 
-        if (keysPressed.w && top > 0 || keysPressed.ArrowUp && top > 0) {
+        if (keysPressed.w && top > 0  || keysPressed.ArrowUp && top > 0) {
             newTop -= step;
             if (checkCollision(newLeft, newTop)) {
                 newTop += step;
@@ -248,6 +248,7 @@ var object = document.getElementById('Cilveeks');
         requestAnimationFrame(move);
     }
 
+ 
     document.addEventListener('keydown', function(event) {
         if (event.key in keysPressed) {
             keysPressed[event.key] = true;
@@ -276,3 +277,31 @@ var object = document.getElementById('Cilveeks');
     moveRandomMovers();
     document.getElementById('MainField').style.display = 'block';
     document.getElementById('CaveField').style.display = 'none';
+
+document.getElementById('upButton').addEventListener('mousedown', () => keysPressed.ArrowUp = true);
+document.getElementById('upButton').addEventListener('mouseup', () => keysPressed.ArrowUp = false);
+document.getElementById('leftButton').addEventListener('mousedown', () => keysPressed.ArrowLeft = true);
+document.getElementById('leftButton').addEventListener('mouseup', () => keysPressed.ArrowLeft = false);
+document.getElementById('downButton').addEventListener('mousedown', () => keysPressed.ArrowDown = true);
+document.getElementById('downButton').addEventListener('mouseup', () => keysPressed.ArrowDown = false);
+document.getElementById('rightButton').addEventListener('mousedown', () => keysPressed.ArrowRight = true);
+document.getElementById('rightButton').addEventListener('mouseup', () => keysPressed.ArrowRight = false);
+
+function Hidebuttons() {
+    var Buttonshowcheck = document.getElementById("buttonshowcheck");
+    var upbut = document.getElementById("upButton")
+    var downbut = document.getElementById("downButton")
+    var leftbut = document.getElementById("leftButton")
+    var rightbut = document.getElementById("rightButton")
+     if (Buttonshowcheck.checked == true){
+        upbut.style.display = "block";
+      downbut.style.display = "block";
+      leftbut.style.display = "block";
+      rightbut.style.display = "block";
+     } else {
+        upbut.style.display = "none";
+        downbut.style.display = "none";
+        leftbut.style.display = "none";
+        rightbut.style.display = "none";
+     }
+}
