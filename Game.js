@@ -4,7 +4,7 @@ var object = document.getElementById('Cilveeks');
     const randomMovers = document.querySelectorAll('.RandomMover');
     const step = 3;
     const randomMoverStep = 1.2; // Samazināts ātrums priekš nejaušā kvadrāta
-    const detectionRadius = 150;
+    const detectionRadius = 300;
 
     const startPosition = {
         left: parseInt(window.getComputedStyle(object).getPropertyValue('left')),
