@@ -216,7 +216,7 @@ function checkRandomMoversCollision() {
             rect1.y + rect1.height > rect2.y
         ) {
             // Teleportē, ja saduras ar nejauši kustīgo kvadrātu
-            resetSquare(3); // Teleportē uz noteiktu vietu
+            resetSquare(4); // Teleportē uz noteiktu vietu
         }
     });
 }
