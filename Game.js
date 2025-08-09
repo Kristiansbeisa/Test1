@@ -2,7 +2,8 @@ var object = document.getElementById('Cilveeks');
 var container = document.getElementById('MainField');
 const obstacles = document.querySelectorAll('.obstacle');
 const randomMovers = document.querySelectorAll('.RandomMover');
-const step = 3;
+let step = 3;
+let slowSpeed = 1;
 const randomMoverStep = 1.2; // Samazināts ātrums priekš nejaušā kvadrāta
 const detectionRadius = 150;
 
@@ -96,8 +97,8 @@ function resetSquare(teleporter) {
         object = document.getElementById('Cilveeks2')
         document.getElementById('MainField').style.display = 'none';
         document.getElementById('HomeField').style.display = 'block';
-        object.style.top = 770 + 'px';
-        object.style.left = 360 + 'px';
+        object.style.top = 370 + 'px';
+        object.style.left = 200 + 'px';
         return;
         /* Izeja no mājas */
     }
@@ -221,7 +222,43 @@ function checkRandomMoversCollision() {
     });
 }
 
+const slowZones = document.querySelectorAll('.slowZone');
+
+function checkSlowZone(newLeft, newTop) {
+    const objectRect = {
+        left: newLeft,
+        top: newTop,
+        right: newLeft + object.clientWidth,
+        bottom: newTop + object.clientHeight
+    };
+
+    for (const zone of slowZones) {
+        const zoneRect = zone.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+
+        const zoneLeft = zoneRect.left - containerRect.left;
+        const zoneTop = zoneRect.top - containerRect.top;
+        const zoneRight = zoneLeft + zone.clientWidth;
+        const zoneBottom = zoneTop + zone.clientHeight;
+
+        if (
+            objectRect.right > zoneLeft &&
+            objectRect.left < zoneRight &&
+            objectRect.bottom > zoneTop &&
+            objectRect.top < zoneBottom
+        ) {
+            return true; // spēlētājs ir iekšā palēninājuma zonā
+        }
+    }
+    return false;
+}
+
+
+
+
+/*kustēšanās*/
 function move() {
+    
     const left = parseInt(window.getComputedStyle(object).getPropertyValue('left'));
     const top = parseInt(window.getComputedStyle(object).getPropertyValue('top'));
 
@@ -252,6 +289,12 @@ function move() {
             newLeft -= step;
         }
     }
+
+    if (checkSlowZone(left, top)) {
+    step = slowSpeed; // lieto palēninātu ātrumu
+} else {
+    step = 3;
+}
 
     object.style.left = newLeft + 'px';
     object.style.top = newTop + 'px';

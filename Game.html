@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="lv">
-    <head>
-        <title>Game</title>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="Main.css" type="text/css">
-        <link rel="icon" href="Cilv.png" type="image/x-icon">
-    </head>
-    <body>
-        <div class="topnavbar">
-            <a class="active" href="index.html">Home</a>
-            <a href="Game.html">Game</a>
-            <a href="Todo.html">To do</a>
-            <a href="Bootstrap.html">Bootstrap</a>
-            <br>
-            <label id="buttonshow" for="buttonshowcheck">Show move buttons</label>
-            <input type="checkbox" id="buttonshowcheck" onclick="Hidebuttons()">
-        </div>
-</div>
+
+<head>
+    <title>Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Main.css" type="text/css">
+    <link rel="icon" href="Cilv.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="topnavbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="Game.html">Game</a>
+        <a href="Todo.html">To do</a>
+        <a href="Bootstrap.html">Bootstrap</a>
+        <br>
+        <label id="buttonshow" for="buttonshowcheck">Show move buttons</label>
+        <input type="checkbox" id="buttonshowcheck" onclick="Hidebuttons()">
+    </div>
+    </div>
     <div id="MainField">
         <div id="Cilveeks"></div>
         <div id="water1" class="obstacle"></div>
         <div id="water2" class="obstacle"></div>
+
+
         <div id="tree1" class="obstacle"></div>
         <div id="leaves1"></div>
+        <div id="tree2" class="obstacle"></div>
+        <div id="leaves2"></div>
+
+
         <div id="House" class="obstacle"></div>
+
+
         <div id="bridge"></div>
+
+
         <div id="Altar1" class="teleport1"></div>
+
+
         <div id="rock1"></div>
         <div id="rock1hitbox" class="obstacle"></div>
         <div id="rock2"></div>
@@ -39,21 +53,49 @@
         <div id="rock5hitbox" class="obstacle"></div>
         <div id="rock6"></div>
         <div id="rock6hitbox" class="obstacle"></div>
+
+
         <div id="caveenter" class="teleport1"></div>
         <div id="caveblocker1" class="obstacle"></div>
         <div id="homeenter" class="teleport1"></div>
+
+
+        <div id="s1" class="slowZone"></div>
+        <div id="s2" class="slowZone"></div>
+        <div id="s3" class="slowZone"></div>
+        <div id="s4" class="slowZone"></div>
+        <div id="s5" class="slowZone"></div>
+        <div id="s6" class="slowZone"></div>
     </div>
+
+
     <div id="HomeField">
         <div id="Cilveeks2"></div>
+
+
         <div id="homeleave" class="teleport1"></div>
+
+
+    <div id="bed1"></div>
+    <div id="bed2" class="obstacle"></div>
     </div>
+
+
     <div id="CaveField">
         <div id="Cilveeks1"></div>
+
+
         <div id="caveleave" class="teleport1"></div>
+
+
         <div id="caveblocker2" class="obstacle"></div>
         <div id="caveblocker3" class="obstacle"></div>
+
+
         <div id="RandomMover1" class="RandomMover"></div>
         <div id="RandomMover2" class="RandomMover"></div>
+
+
         <div id="rock7"></div>
         <div id="rock7hitbox" class="obstacle"></div>
         <div id="rock8"></div>
@@ -68,6 +110,7 @@
         <div><button type="button" id="downButton" class="control-button">Down</button></div>
         <button type="button" id="rightButton" class="control-button">Right</button>
     </div>
-    </body>
-    <script type="text/javascript" src="Game.js"></script>
+</body>
+<script type="text/javascript" src="Game.js"></script>
+
 </html>
