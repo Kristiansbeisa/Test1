@@ -86,6 +86,10 @@ function resetSquare(teleporter) {
         object = document.getElementById('Cilveeks1')
         document.getElementById('MainField').style.display = 'none';
         document.getElementById('CaveField').style.display = 'block';
+        document.getElementById('RandomMover1').style.top = "400px";
+        document.getElementById('RandomMover1').style.left = "200px";
+        document.getElementById('RandomMover2').style.top = "100px";
+        document.getElementById('RandomMover2').style.left = "600px";
         object.style.top = 650 + 'px';
         object.style.left = 350 + 'px';
 
@@ -121,6 +125,51 @@ function resetSquare(teleporter) {
         object.style.left = 750 + 'px';
         return;
     }
+    // Ieeja CaveField1
+    else if (teleporter === 5) {
+        container = document.getElementById('CaveField1');
+        object = document.getElementById('Cilveeks3')
+        document.getElementById('CaveField1').style.display = 'block';
+        document.getElementById('CaveField').style.display = 'none';
+        object.style.top = 150 + 'px';
+        object.style.left = 750 + 'px';
+        return;
+    }
+    //Izeja no CaveField1 uz CaveField
+    else if (teleporter === 6) {
+        container = document.getElementById('CaveField');
+        object = document.getElementById('Cilveeks1')
+        document.getElementById('CaveField').style.display = 'block';
+        document.getElementById('CaveField1').style.display = 'none';
+        document.getElementById('RandomMover1').style.top = "400px";
+        document.getElementById('RandomMover1').style.left = "200px";
+        document.getElementById('RandomMover2').style.top = "100px";
+        document.getElementById('RandomMover2').style.left = "600px";
+        object.style.top = 150 + 'px';
+        object.style.left = 30 + 'px';
+        return;
+    }
+    //Ieeja no CaveField1 uz CaveField2
+    else if (teleporter === 7) {
+        container = document.getElementById('CaveField2');
+        object = document.getElementById('Cilveeks4')
+        document.getElementById('CaveField2').style.display = 'block';
+        document.getElementById('CaveField1').style.display = 'none';
+        object.style.top = 30 + 'px';
+        object.style.left = 150 + 'px';
+        return;
+    }
+    //Izeja no CaveField2 uz CaveField1
+    else if (teleporter === 8) {
+        container = document.getElementById('CaveField1');
+        object = document.getElementById('Cilveeks3')
+        document.getElementById('CaveField1').style.display = 'block';
+        document.getElementById('CaveField2').style.display = 'none';
+        object.style.top = 770 + 'px';
+        object.style.left = 150 + 'px';
+        return;
+    }
+
 }
 
 function checkRandomMoverCollisionWithObstacles(newLeft, newTop, mover) {
@@ -293,7 +342,7 @@ function move() {
     if (checkSlowZone(left, top)) {
     step = slowSpeed; // lieto palēninātu ātrumu
 } else {
-    step = 3;
+    step = 10;
 }
 
     object.style.left = newLeft + 'px';
@@ -332,6 +381,8 @@ move();
 moveRandomMovers();
 document.getElementById('MainField').style.display = 'block';
 document.getElementById('CaveField').style.display = 'none';
+document.getElementById('CaveField1').style.display = 'none';
+document.getElementById('CaveField2').style.display = 'none';
 document.getElementById('HomeField').style.display = 'none';
 
 document.getElementById('upButton').addEventListener('mousedown', () => keysPressed.ArrowUp = true);

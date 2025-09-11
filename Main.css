@@ -100,6 +100,26 @@ body {
     left: 100px;
 }
 
+#Cilveeks3 {
+    z-index: 9;
+    width: 20px;
+    height: 20px;
+    background-image: url(Cilv.png);
+    position: absolute;
+    top: 160px;
+    left: 100px;
+}
+
+#Cilveeks4 {
+    z-index: 9;
+    width: 20px;
+    height: 20px;
+    background-image: url(Cilv.png);
+    position: absolute;
+    top: 160px;
+    left: 100px;
+}
+
 .obstacle {
     width: 100px;
     height: 100px;
@@ -444,6 +464,14 @@ body {
     left: 300px;
 }
 
+#cavenext {
+    background-color: black;
+    width: 20px;
+    height: 125px;
+    top: 100px;
+    left: 0px;
+}
+
 #caveblocker2 {
     width: 1px;
     height: 125px;
@@ -522,6 +550,58 @@ body {
     left: 553px;
     rotate: 60deg;
 }
+
+#CaveField1 {
+    display: none;
+    display: flex;
+    position: center;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    margin: 20px auto;
+    background-color: rgb(92, 92, 92);
+    box-shadow: 0 0 25px 30px rgb(92, 92, 92);
+}
+
+#cave1prev {
+    background-color: black;
+    width: 20px;
+    height: 125px;
+    top: 100px;
+    left: 790px;
+}
+
+#cave1next {
+    background-color: black;
+    width: 125px;
+    height: 20px;
+    top: 790px;
+    left: 100px;
+}
+
+
+#CaveField2 {
+    display: none;
+    display: flex;
+    position: center;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    margin: 20px auto;
+    background-color: rgb(92, 92, 92);
+    box-shadow: 0 0 25px 30px rgb(92, 92, 92);
+}
+
+#cave2prev {
+    background-color: black;
+    width: 125px;
+    height: 20px;
+    top: 10px;
+    left: 100px;
+}
+
+
+
 
 .control-button {
     width: 100px;
