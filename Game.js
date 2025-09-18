@@ -342,7 +342,7 @@ function move() {
     if (checkSlowZone(left, top)) {
     step = slowSpeed; // lieto palēninātu ātrumu
 } else {
-    step = 3;
+    step = 10;
 }
 
     object.style.left = newLeft + 'px';
@@ -433,5 +433,4 @@ function addButtonListeners(buttonId, key) {
 addButtonListeners('upButton', 'ArrowUp');
 addButtonListeners('leftButton', 'ArrowLeft');
 addButtonListeners('downButton', 'ArrowDown');
-
 addButtonListeners('rightButton', 'ArrowRight');
